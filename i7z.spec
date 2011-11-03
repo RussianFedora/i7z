@@ -1,14 +1,15 @@
 %global svnrevision 70
 
 Name:           i7z
-Version:        0.28
-Release:        1.svn%{svnrevision}%{?dist}.R
+Version:        0.28.svn%{svnrevision}
+Release:        1%{?dist}.R
 Summary:        A better i7 (and now i3, i5) reporting tool
 
 License:        GPLv2+
 URL:            http://code.google.com/p/i7z/
 Source0:        %{name}-%{version}.svn%{svnrevision}.tar.xz
 
+BuildRequires:  ncurses-devel
 
 %description
 Better i7 (and now i3, i5) reporting tool
