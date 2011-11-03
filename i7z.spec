@@ -7,7 +7,7 @@ Summary:        A better i7 (and now i3, i5) reporting tool
 
 License:        GPLv2+
 URL:            http://code.google.com/p/i7z/
-Source0:        %{name}-%{version}.svn%{svnrevision}.tar.xz
+Source0:        %{name}-0.28.svn%{svnrevision}.tar.xz
 
 BuildRequires:  ncurses-devel
 
@@ -15,7 +15,7 @@ BuildRequires:  ncurses-devel
 Better i7 (and now i3, i5) reporting tool
 
 %prep
-%setup -q -n %{name}-%{version}.svn%{svnrevision}
+%setup -q -n %{name}-0.28.svn%{svnrevision}
 sed -i -e 's|/usr/sbin|%{buildroot}/usr/sbin|' Makefile
 
 
