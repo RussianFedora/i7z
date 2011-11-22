@@ -1,9 +1,10 @@
-%global svnrevision 70
+%global svnrevision 71
 
 Name:           i7z
 Version:        0.28.svn%{svnrevision}
 Release:        1%{?dist}.R
 Summary:        A better i7 (and now i3, i5) reporting tool
+Summary(ru):    Средство анализа работы процессоров Intel i3, i5, i7
 
 License:        GPLv2+
 URL:            http://code.google.com/p/i7z/
@@ -13,6 +14,10 @@ BuildRequires:  ncurses-devel
 
 %description
 Better i7 (and now i3, i5) reporting tool
+
+%description -l ru
+Позволяет просматривать состояние и частоту работы ядер
+процессоров Intel i3, i5, i7
 
 %prep
 %setup -q -n %{name}-0.28.svn%{svnrevision}
@@ -40,5 +45,10 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Tue Nov 22 2011 Vasiliy N. Glazov <vascom2@gmail.com> - 0.28.svn71-1.R
+- Update to new svn revision
+- Added description in russian language
+
+
 * Thu Nov 03 2011 Vasiliy N. Glazov <vascom2@gmail.com> - 0.28-1.svn70.R
 - Initial build
