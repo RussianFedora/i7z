@@ -1,4 +1,4 @@
-%global svnrevision 71
+%global svnrevision 78
 
 Name:           i7z
 Version:        0.28.svn%{svnrevision}
@@ -43,8 +43,10 @@ rm -rf %{buildroot}
 %doc README.txt
 
 
-
 %changelog
+* Wed Dec 14 2011 Vasiliy N. Glazov <vascom2@gmail.com> - 0.28.svn78-1.R
+- Update to new svn revision
+
 * Tue Nov 22 2011 Vasiliy N. Glazov <vascom2@gmail.com> - 0.28.svn71-1.R
 - Update to new svn revision
 - Added description in russian language
