@@ -2,7 +2,7 @@
 
 Name:           i7z
 Version:        0.28.svn%{svnrevision}
-Release:        1%{?dist}.R
+Release:        1%{?dist}
 Summary:        A better i7 (and now i3, i5) reporting tool
 Summary(ru):    Средство анализа работы процессоров Intel i3, i5, i7
 
@@ -10,6 +10,7 @@ License:        GPLv2+
 URL:            http://code.google.com/p/i7z/
 Source0:        %{name}-0.28.svn%{svnrevision}.tar.xz
 Source100:      README.RFRemix
+BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
 BuildRequires:  ncurses-devel
 
