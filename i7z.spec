@@ -1,4 +1,4 @@
-%global svnrevision 81
+%global svnrevision 103
 
 Name:           i7z
 Version:        0.28.svn%{svnrevision}
@@ -9,8 +9,6 @@ Summary(ru):    Средство анализа работы процессор�
 License:        GPLv2+
 URL:            http://code.google.com/p/i7z/
 Source0:        %{name}-0.28.svn%{svnrevision}.tar.xz
-Source100:      README.RFRemix
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
 BuildRequires:  ncurses-devel
 
@@ -28,25 +26,22 @@ sed -i -e 's|/usr/sbin|%{buildroot}/usr/sbin|' Makefile
 
 %build
 make %{?_smp_mflags}
-cp %{SOURCE100} .
 
 
 %install
-rm -rf $RPM_BUILD_ROOT
 mkdir -p %{buildroot}/usr/sbin
 make install DESTDIR=$RPM_BUILD_ROOT
 
-%clean
-rm -rf %{buildroot}
-
 
 %files
-%defattr(-,root,root,-)
 %{_sbindir}/%{name}
-%doc README.txt README.RFRemix
+%doc README.txt
 
 
 %changelog
+* Wed Aug 22 2012 Vasiliy N. Glazov <vascom2@gmail.com> - 0.28.svn103-1.R
+- Update to new svn revision
+
 * Tue Jan 24 2012 Vasiliy N. Glazov <vascom2@gmail.com> - 0.28.svn81-1.R
 - Update to new svn revision
 
