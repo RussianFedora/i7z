@@ -29,13 +29,13 @@ make %{?_smp_mflags}
 
 
 %install
-mkdir -p %{buildroot}/usr/sbin
 make install DESTDIR=$RPM_BUILD_ROOT
-
+rm -rf %{buildroot}/%{_datadir}/doc
 
 %files
+%doc README.txt COPYING put_cores_offline.sh put_cores_online.sh MAKEDEV-cpuid-msr
 %{_sbindir}/%{name}
-%doc README.txt
+%{_mandir}/man1/%{name}.1*
 
 
 %changelog
