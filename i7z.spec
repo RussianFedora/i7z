@@ -1,8 +1,8 @@
-%global svnrevision 103
+%global svnrevision 112
 
 Name:           i7z
 Version:        0.28.svn%{svnrevision}
-Release:        2%{?dist}
+Release:        1%{?dist}
 Summary:        A better i7 (and now i3, i5) reporting tool
 Summary(ru):    Средство анализа работы процессоров Intel i3, i5, i7
 
@@ -35,7 +35,7 @@ popd
 
 
 %install
-make install DESTDIR=$RPM_BUILD_ROOT
+%make_install
 install -m 0755 GUI/%{name}_GUI %{buildroot}/%{_sbindir}/%{name}_GUI
 rm -rf %{buildroot}/%{_datadir}/doc
 
@@ -46,6 +46,9 @@ rm -rf %{buildroot}/%{_datadir}/doc
 
 
 %changelog
+* Fri Nov 29 2013 Vasiliy N. Glazov <vascom2@gmail.com> - 0.28.svn112-1.R
+- Update to last svn version
+
 * Wed Aug 22 2012 Vasiliy N. Glazov <vascom2@gmail.com> - 0.28.svn103-2.R
 - Added GUI
 
